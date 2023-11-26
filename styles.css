@@ -1,0 +1,480 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* menu desktop*/
+.menu-desktop {
+  display: flex;
+  height: 8vh;
+  width: 100%;
+  gap: 0.8rem;
+  background-color:#E6AEC1;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.menu-esquerdo ul {
+  background-color: #E6AEC1;
+}
+
+.logo {
+  height: 2rem;
+  width: auto;
+  background-color:#E6AEC1;
+  cursor: pointer;
+}
+
+.menu-esquerdo a {
+  margin-right: 1.5rem;
+  text-decoration: none;
+  background-color: #E6AEC1;
+  color: #6f5b35;
+}
+
+.menu-direito ul {
+  background-color: #E6AEC1;
+}
+
+.menu-direito a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  background-color: #E6AEC1;
+  color: #6f5b35;
+}
+
+.menu-esquerdo ul :hover {
+  color: #ED3237;
+}
+
+.menu-direito ul :hover {
+  color: #ED3237;
+}
+
+header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+
+/*fim menu desktop*/
+/*menu mobile*/
+.menu-mobile {
+  display: none;
+  height: 8vh;
+  width: 100%;
+  gap: 14px;
+  background-color:#E6AEC1;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.logo-mob {
+  height: 28px;
+  width: auto;
+  background-color:#E6AEC1;
+  cursor: pointer;
+}
+
+.nav-mob {
+  display: flex;
+  background-color: #E6AEC1;
+}
+
+.nav-mob li {
+  list-style: none;
+  letter-spacing: 2px;
+  margin-left: 16px;
+  background-color: #E6AEC1;
+}
+
+.nav-mob a {
+  background-color: #E6AEC1;
+  color: #6f5b35;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  background-color: #E6AEC1;
+}
+
+.bar {
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: #6f5b35;
+  color: #E6AEC1;
+  margin: 8px;
+  transform: 0.3s ease-in-out;
+}
+/*fim menu mobile*/
+
+/*slider*/
+#banner {
+  display: flex;
+  align-items: center;
+}
+.slider-container {
+  align-items: center;
+}
+
+.slide {
+  width: 95vw;
+  overflow: hidden;
+}
+
+.slider-container .slide {
+z-index: 1;
+position: absolute;
+width: 100%;
+clip-path: circle(0% at 0 50%);
+}
+
+.slider-container .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 0.6s;
+  transition-property: clip-path;
+}
+
+.slider-container .slide img {
+  z-index: 1;
+  width: 100%;
+  object-fit: cover;
+  max-height: 90vh;
+}
+
+.slider-container .slide .info {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  color: #fff;
+}
+
+.slider-container .slide .info h1 {
+  max-width: 85%;
+  font-size: 2rem;
+  font-weight: 800;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  padding: 5px;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.slider-container .slide .info h1 span {
+  max-width: 100%;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.slider-container .slide .info h3 {
+  max-width: 80%;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  padding: 2px;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+.slider-container .slide .info a {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #E6AEC1;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+#banner a:hover{
+  background-color: #e16e94;
+}
+
+.slider-container .navigation {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 35vh;
+  left: 5%;
+  transform: translateX(-50%)
+  
+}
+
+.slider-container .navigation .btn {
+  background: rgba(255, 255, 255, 0.5);
+  width: 15px;
+  height: 15px;
+  margin: 12px;
+  cursor: pointer;
+}
+
+.slider-container .navigation .btn.active {
+  background: #e16e94;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+/*fim slider*/
+/*vacinas*/
+#vacinas {
+  background-color: #ffffff;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vacina-conteiner {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.vacina-conteiner h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 50px;
+  background-color: #f2d2da;
+  color: #6f5b35;
+}
+.vac-card-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.card-vacina {
+  display: flex;
+  border: solid 2px;
+  border-radius: 2px;
+  width: 300px;
+  color: #6f5b35;
+  margin-top: 3px;
+  margin-left: 3px;
+  justify-content: center;
+}
+.asterisco {
+  display: flex;
+  color: #6f5b35;
+  margin-top: 1rem;
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+.info-vac {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.card-calend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+}
+.perf-calend {
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3%;
+  padding: 0.8rem;
+  width: 120px;
+  text-align: center;
+  background-color: #f2d2da;
+  box-shadow: 20px 20px 30px -30px;
+  cursor: pointer;
+}
+.perf-calend img {
+  width: 50%;
+  height: 50%;
+  object-fit: fill;
+}
+.perf-calend p {
+  color: #6f5b35;
+}
+.card-calend :hover {
+  background-color: #E6AEC1;
+  transition: 0.3s;
+}
+/*fim-vacinas*/
+/*servicos*/
+#servicos {
+  background-color: #f2d2da;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.servicos-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.servicos-container h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border-radius: 50px;
+  background-color: #e5a3b3;
+  color: #6f5b35;
+}
+.cards-serv p, h4 {
+  color: #6f5b35;
+}
+.box-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.cards-serv {
+  border-radius: 3%;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  background-color: #E6AEC1;
+  box-shadow: 20px 20px 30px -30px;
+}
+.cards-serv img {
+  width: 90%;
+  border-radius: 10%;
+  margin-bottom: 1rem;
+}
+.cards-serv h4 {
+  margin-bottom: 0.6rem;
+}
+/*fim servicos*/
+/*responsividade*/
+/*basicao*/
+@media (max-width: 851px) {
+  header {
+      z-index: 999;
+      width: 100vw;
+    }
+    
+    .menu-desktop {
+      display: none;
+    }
+  
+    .menu-mobile {
+      display: flex;
+      justify-content: space-around;
+      min-width: 375px;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg)
+    }
+  
+    .hamburger.active .bar:nth-child(3){
+      transform: translateY(-10px) rotate(-45deg)
+    }
+  
+    .hamburger.active .bar:nth-child(2){
+      opacity: 0;
+    }
+  
+    .nav-mob {
+      color: #e5a3b3;
+    }
+  
+    .nav-mob li :hover {
+      color: #ED3237;
+      font-weight: 400;
+    }
+  
+    .nav-mob {
+      position: fixed;
+      top: -7vh;
+      left: 100vw;
+      width: 60vw;
+      height: 93vh;
+      border-radius:0px 0px 0px 10px;
+      background-color: #E6AEC1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      transition: 0.2s ease-in-out;
+    }
+  
+    .nav-mob.active {
+      z-index: 999;
+      top: 7vh;
+      left: 40vw;
+    }
+} 
+
+@media (max-width: 840px){
+  .slider-container .slide .info {
+    top: 35%;
+    left: 18%;
+  }
+
+  .slider-container .slide .info h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+
+  }
+  
+  .slider-container .slide .info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .slider-container .navigation {
+    top: 30vw;
+    left: 5%;
+  }
+  /*vacinas*/
+  #vacinas {
+    position: absolute;
+    top: 83vh;
+  }
+}
+
+@media (max-width: 440px){
+  .slider-container .slide .info {
+    top: 25vw;
+    left: 12%;
+  }
+
+  .slider-container .slide .info h1 {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+
+  }
+  
+  .slider-container .slide .info h3 {
+    font-size: 0.8rem;
+  }
+  
+  .slider-container .navigation {
+    top: 18vh;
+    left: 5%;
+  }
+  /*vacinas*/
+  #vacinas {
+    position: absolute;
+    top: 45vh;
+  }
+}
+/*fim responsividade*/
