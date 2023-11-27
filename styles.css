@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 /* menu desktop*/
 .menu-desktop {
@@ -60,7 +65,6 @@ header {
   top: 0;
   left: 0;
 }
-
 
 /*fim menu desktop*/
 /*menu mobile*/
@@ -121,9 +125,14 @@ header {
 #banner {
   display: flex;
   align-items: center;
+  position: relative;
+  height: 90vh;
+  width: 100vw;
 }
+
 .slider-container {
   align-items: center;
+  height: 100%;
 }
 
 .slide {
@@ -147,26 +156,28 @@ clip-path: circle(0% at 0 50%);
 .slider-container .slide img {
   z-index: 1;
   width: 100%;
-  object-fit: cover;
   max-height: 90vh;
 }
 
 .slider-container .slide .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 25%;
   color: #fff;
 }
 
 .slider-container .slide .info h1 {
   max-width: 85%;
+  margin-bottom: .8rem;
   font-size: 2rem;
   font-weight: 800;
   border-radius: 5px;
   text-transform: uppercase;
-  margin-bottom: 2rem;
   padding: 5px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(3px);
   background: rgba(255, 255, 255, 0.1);
 }
 
@@ -176,25 +187,11 @@ clip-path: circle(0% at 0 50%);
   font-size: 1rem;
 }
 
-.slider-container .slide .info h3 {
-  max-width: 80%;
-  margin-bottom: 1rem;
-  font-weight: 600;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  text-transform: uppercase;
-  padding: 2px;
-  backdrop-filter: blur(25px);
-  background: rgba(255, 255, 255, 0.1);
-}
-
-
 .slider-container .slide .info a {
-  margin-top: 1rem;
   text-decoration: none;
   color: #fff;
   background-color: #E6AEC1;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   transition: 0.5s ease;
 }
@@ -233,6 +230,7 @@ clip-path: circle(0% at 0 50%);
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 .vacina-conteiner {
   margin-top: 1rem;
@@ -316,13 +314,19 @@ clip-path: circle(0% at 0 50%);
 #servicos {
   background-color: #f2d2da;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 .servicos-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
+.actioncall{
+  margin-top: 1rem;
+}
+
 .servicos-container h3 {
   display: flex;
   justify-content: center;
@@ -359,7 +363,334 @@ clip-path: circle(0% at 0 50%);
 .cards-serv h4 {
   margin-bottom: 0.6rem;
 }
+
+.box-cards :hover {
+  scale: 1.03;
+}
 /*fim servicos*/
+/*clinica*/
+#clinica {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+
+}
+.clinica-container h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 50px;
+  background-color: #f2d2da;
+  color: #6f5b35;
+}
+.slider {
+  width: 400px;
+  float: left;
+}
+.slide-clinica {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 75vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.slideclinic {
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 20px 20px 30px -30px;
+  padding: 0.5rem;
+  background-color: #f2d2da;
+  border-radius: 10px;
+}
+.slideclinic img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+
+}
+.slide-clinica button {
+  display: block;
+  background-color: #f2d2da;
+  border: none;
+  border-radius: 10%;
+  padding: 3px;
+  cursor: pointer;
+}
+.texto-clinica {
+  min-width: 350px;
+  max-width: 550px;
+}
+.texto-clinica p {
+  border-radius: 3%;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f2d2da;
+  box-shadow: 20px 20px 30px -30px;
+  color: #6f5b35;
+}
+.instagram {
+  background-color: #f2d2da;
+  width: 100vw;
+}
+.instagram h3 {
+  background-color: #E6AEC1;
+}
+.caixa-insta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.incorp {
+  overflow: hidden;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #E6AEC1;
+  box-shadow: 20px 20px 30px -30px;
+}
+/*fim clinica*/
+/*footer*/
+.footer{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.rodape {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #E6AEC1;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+.caixa-logor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 404px;
+  gap: 1rem;
+}
+.logor img {
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+}
+/*btn sociais*/
+.phone {
+  display: flex;
+  align-items: center;
+}
+.icone-fone {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin: 0.6rem;
+  color: #fff;
+  background-color: #96a1ed;
+  border-radius: 35px;
+}
+.box {
+  width: 182px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 0.6rem;
+  position: relative;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: all .3s ease;
+}
+.box:hover {
+  background-color: #e03abc;
+  color: #fff;
+  box-shadow: 0 0 50px #c0229e7c;
+}
+.box:nth-child(1):hover {
+  background: #6181e9;
+  box-shadow: 0 0 50px #5e8edb7c;
+}
+.box:nth-child(2):hover {
+  background: #c32aa3;
+  box-shadow: 0 0 50px #b315917c;
+}
+.iconbar a {
+  text-decoration: none;
+  color: #6f5b35;
+  transform: translate(55px);
+}
+.iconbar p {
+  transform: translate(60px);
+}
+.box:nth-child(3):hover {
+  background: #25d366;
+  box-shadow: 0 0 50px #25d3657e;
+}
+.box:nth-child(4):hover {
+  background: #25d366;
+  box-shadow: 0 0 50px #25d3657e;
+}
+.box .icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: all .4s ease;
+}
+.fone {
+  background-color: #6181e9;
+}
+.instag {
+  background-color: #c32aa3;
+}
+.wpp {
+  background-color: #25d366;
+}
+.box:hover .icon {
+  background: #fff;
+  color: #3b3b3b;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+}
+/*fim btn sociais*/
+/*MAPA*/
+.mapa-conteiner {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem;
+}
+.caixa-mapa h3 {
+  color: #6f5b35;
+}
+.caixa-mapa p {
+  color: #6f5b35;
+}
+.caixa-mapa {
+  width: 300px;
+  padding: 1rem;
+}
+.caixa-mapa iframe {
+  margin-top: 1rem;
+  width: 300px;
+}
+/*FIM - MAPA*/
+.caixa-horario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 404px;
+}
+.boxh {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.boxh h3, p {
+  color: #6f5b35;
+}
+.boxh .hora {
+  background-color: #6f5b35;
+  padding: 7px;
+  border-radius: 10px;
+  color: #fff;
+}
+.line {
+  width: 90%;
+  height: 0;
+  border: 1px solid;
+  color: #6f5b35;
+}
+.lineend {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  padding: 20px 0 ;
+}
+
+footer .dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 155px;
+  scale: 0.8;
+  text-decoration: none;
+  color: #6f5b35;
+  border-radius: 10px;
+  transition: 0.2s ease-in;
+}
+
+footer .dev:hover {
+  color: #fff;
+  background-color: #6f5b35;
+  border-radius: 10px;
+}
+
+/*botao wpp*/
+#wppfull {
+  position: fixed;
+  z-index: 999;
+  top: 85vh;
+  right: 4vw;
+}
+
+.boxfull {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.wppfull {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: #17e563;
+  border-radius: 50%;
+}
+
+.boxfull .fale {
+  text-decoration: none;
+  width: 150px;
+  height: 44px;
+  transition: 0.3s ease-in;
+  display: flex;
+  background: #fff;
+  position: fixed;
+  top: 86vh;
+  right: 6vw;
+}
+.boxfull :hover {
+  transition: 0.3s ease-in;
+  scale: 1.2;
+  background: #1eda63;
+  box-shadow: 0 0 30px #16a64d7e;
+}
+
+/*fim botao wpp*/
+/*fim-footer*/
+
 /*responsividade*/
 /*basicao*/
 @media (max-width: 851px) {
@@ -422,9 +753,17 @@ clip-path: circle(0% at 0 50%);
       top: 7vh;
       left: 40vw;
     }
+
+    footer .dev {
+      scale: 0.6;
+    }
 } 
 
 @media (max-width: 840px){
+  #banner {
+    height: 65vw;
+  }
+
   .slider-container .slide .info {
     top: 35%;
     left: 18%;
@@ -441,17 +780,16 @@ clip-path: circle(0% at 0 50%);
   }
   
   .slider-container .navigation {
-    top: 30vw;
+    top: 25vw;
     left: 5%;
-  }
-  /*vacinas*/
-  #vacinas {
-    position: absolute;
-    top: 83vh;
   }
 }
 
-@media (max-width: 440px){
+@media (max-width: 460px){
+  #banner {
+    height: 65vw;
+  }
+
   .slider-container .slide .info {
     top: 25vw;
     left: 12%;
@@ -459,8 +797,7 @@ clip-path: circle(0% at 0 50%);
 
   .slider-container .slide .info h1 {
     margin-bottom: 0.8rem;
-    font-size: 1.2rem;
-
+    font-size: 1rem;
   }
   
   .slider-container .slide .info h3 {
@@ -468,13 +805,9 @@ clip-path: circle(0% at 0 50%);
   }
   
   .slider-container .navigation {
-    top: 18vh;
+    top: 12vh;
     left: 5%;
   }
-  /*vacinas*/
-  #vacinas {
-    position: absolute;
-    top: 45vh;
-  }
 }
+
 /*fim responsividade*/

@@ -15,6 +15,44 @@ hamburguer.addEventListener("click", () => {
   })
 });
 //fim menu mobile
+//scroll
+const menuItems = document.querySelectorAll('.menu-desktop a[href^="#"]');
+const vacAction = document.querySelector('.vaccall');
+
+vacc = vacAction.addEventListener('click', scrollToIdOnClick);
+
+menuItems.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick);
+})
+
+function scrollToIdOnClick(event) {
+  event.preventDefault();
+  const element = event.target;
+  const idd = element.getAttribute('href');
+  const to = document.querySelector(idd).offsetTop;
+  
+  window.scroll({
+    top: to - 55
+  });
+}
+//scroll mobile
+const menuMobs = document.querySelectorAll('.menu-mobile a[href^="#"]');
+
+menuMobs.forEach(item => {
+  item.addEventListener('click', scrollToIdOnClick);
+})
+
+function scrollToIdOnClick(event) {
+  event.preventDefault();
+  const element = event.target;
+  const idd = element.getAttribute('href');
+  const to = document.querySelector(idd).offsetTop;
+  
+  window.scroll({
+    top: to - 55
+  });
+}
+//fim scroll
 //slider
 const slides = document.querySelectorAll('.slide');
 const btns = document.querySelectorAll('.btn');
@@ -63,9 +101,38 @@ const repeater = () => {
     return;
   }
   repeater();
-}, 4000);
+}, 5000);
 }
 repeater();
 }
 repeat();
 //fim slider
+//slide 2
+const slides2 = document.querySelectorAll(".slider2");
+const prevButton2 = document.querySelector(".prev2");
+const nextButton2 = document.querySelector(".next2");
+let currentIndex2 = 0;
+
+function showSlide(index) {
+  slides2.forEach((slider, i) => {
+    if (i === index) {
+      slider.style.display = "block";
+    } else {
+      slider.style.display = "none";
+    }
+  });
+}
+
+function nextSlide2() {
+  currentIndex2 = (currentIndex2 + 1) % slides2.length;
+  showSlide(currentIndex2);
+}
+
+function prevSlide2() {
+  currentIndex2 = (currentIndex2 - 1 + slides2.length) % slides2.length;
+  showSlide(currentIndex2);
+}
+
+nextButton2.addEventListener("click", nextSlide2);
+prevButton2.addEventListener("click", prevSlide2);
+//fim slider 2
