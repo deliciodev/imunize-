@@ -313,7 +313,6 @@ clip-path: circle(0% at 0 50%);
 /*servicos*/
 #servicos {
   background-color: #f2d2da;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -321,10 +320,6 @@ clip-path: circle(0% at 0 50%);
 .servicos-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.actioncall{
-  margin-top: 1rem;
 }
 
 .servicos-container h3 {
@@ -366,6 +361,26 @@ clip-path: circle(0% at 0 50%);
 
 .box-cards :hover {
   scale: 1.03;
+}
+
+.botaoaction {
+  text-decoration: none;
+  color: #fff;
+  background: #e59cb4;
+  padding: 10px;
+  transition: 0.5s ease;
+}
+
+.botaoaction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#servicos a:hover {
+  color: #6f5b35;
+  background: #e16e94;
+  scale: 1.05;
 }
 /*fim servicos*/
 /*clinica*/
